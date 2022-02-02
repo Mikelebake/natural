@@ -27,7 +27,7 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar{
@@ -151,6 +151,7 @@ header ul li a.active:before
   border-radius: 10px;
   font-weight: 900;
   cursor: pointer;
+  font-size: 16px;
   
 }
 
@@ -205,6 +206,7 @@ header ul li a.active:before
     border: 2px solid var(--red);
     border-radius: 10% 40% 10% 40%;
     z-index: 99;
+    font-size: 17px;
 }
 
 .home .content a:before,
@@ -245,8 +247,18 @@ header ul li a.active:before
 }
 
 .about  h2{
-    font-size: 3rem;
+    font-size: 50px;
     text-align: center;
+}
+
+.about p
+{
+    font-size: 17px;
+}
+
+.about h3
+{
+    font-size: 20px;
 }
 
 .about .content .box{
@@ -295,12 +307,23 @@ header ul li a.active:before
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .fday .content .recetteImg
 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.fday p, .fday li{
+    font-size: 17px;
+}
+
+.fday h3
+{
+    font-size: 21px;
+}
+
 .fday .content .recetteImg img
 {
     width: 250px;
@@ -482,9 +505,13 @@ header ul li a.active:before
     padding:1rem 0;
 }
 
-.produits .button-container .btn{
+.produits .button-container .commande{
     margin:1rem;
     cursor: pointer;
+}
+
+.produits .button-container .commande:hover{
+    color: var(--red);
 }
 
 .produits .image-container{
