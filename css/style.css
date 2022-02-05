@@ -17,25 +17,17 @@
     --fred : rgba(247, 0, 0, 0.034);
     --fon : rgba(0, 180, 69, 0.185);
     --fond : #ffff;
-    --main-color:#4C84FF;
-    --primary-bg-color:#fff;
-    --secondary-bg-color:#eee;
-    --primary-text-color:#222;
-    --secondary-text-color:#666;
+    --fond2:#eee;
+    --vert:rgb(53, 189, 0);
 }
 
 html{
-    font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar{
     width:1.3rem;
-}
-
-html::-webkit-scrollbar-track{
-    background-color: var(--red);
 }
 
 html::-webkit-scrollbar-thumb{
@@ -158,9 +150,7 @@ header ul li a.active:before
 .commande:hover{
   background: none;
   color: #fff;
-  border: 2px solid var(--red);
-
-  
+  border: 2px solid var(--red); 
 }
 
 
@@ -170,6 +160,7 @@ header ul li a.active:before
     position: relative;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -341,6 +332,24 @@ header ul li a.active:before
     width: 100%;
 }
 
+.fday .content .recette .box a
+{
+    background: var(--vert);
+    color: #fff;
+    padding: 7px 10px;
+    border: 2px solid var(--vert);
+    border-radius: 10px;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 16px;
+    
+  }
+  
+.fday .content .recette .box a:hover{
+    background: none;
+    color: var(--vert);
+}
+
 .teamBx
 {
     position: relative;
@@ -385,37 +394,52 @@ header ul li a.active:before
 .teamBx .member .details
 {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000;
+    background: #fff;
     transition: 0.2s;
     opacity: 0;
+    text-align: center;
+}
+
+.teamBx .member .details a
+{
+    margin: 5px;
+}
+.teamBx .member .details img
+{
+    width: 30px;
+    opacity: 1;
+}
+.teamBx .member .details img:hover
+{
+    filter: invert(0.3);
 }
 
 .teamBx .member:hover .details
 {
-    opacity: 0.7;
+    opacity: 0.8;
     transition: 0.3s;
 }
 
 .teamBx .member .details h2
 {
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 1px;
+    opacity: 1;
 }
 
-.teamBx .member .details h2 span
+.teamBx .member .details h3
 {
-    display: block;
-    font-size: 10px;
-    font-weight: 300;
+    color: rgb(0, 0, 0);
+    opacity: 1;
 }
 
 
@@ -523,14 +547,14 @@ header ul li a.active:before
 }
 
 .produits .image-container .box{
-    width:35rem;
-    margin: 1rem;
+    width:20rem;
+    margin: 0.5rem;
     border-radius: .5rem;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     overflow: hidden;
-    height: 25rem;
+    height: 15rem;
     position: relative;
-    border:1.5rem solid var(--primary-bg-color);
+    border:1.5rem solid rgba(255, 255, 255, 0.774);
     cursor: pointer;
 }
 
@@ -545,7 +569,7 @@ header ul li a.active:before
     top:0; left: 0;
     height: 100%;
     width: 100%;
-    background:var(--primary-bg-color);
+    background:#fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -559,8 +583,8 @@ header ul li a.active:before
 }
 
 .produits .image-container .box .info h3{
-    font-size: 2.5rem;
-    color:var(--primary-text-color);
+    font-size: 1.5rem;
+    color:var(--black);
 }
 
 
@@ -568,7 +592,6 @@ header ul li a.active:before
 {
     padding: 50px;
     min-height: 100vh;
-    /* background: linear-gradient(rgba(0, 0, 0, 0.603),rgba(0, 0, 0, 0.658)),url(../images/bg-promo.jpg); */
     background-color: var(--fred);
     background-size: cover;
     width: 100%;
@@ -626,7 +649,7 @@ header ul li a.active:before
   border-radius: 50%;
 }
 .blog .box .commentaires img:hover{
-  filter: invert(0.7);
+  filter: invert(0.3);
 }
 
 .blog .content .sbox{
@@ -653,6 +676,22 @@ header ul li a.active:before
 .contact .content{
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+.contact .content .ibox{
+  display: flex;
+  align-items: center;
+}
+
+.contact .content .ibox .image{
+  margin: 0 5px;
+}
+
+.contact .content .info img{
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
 .contact .content .form{
@@ -717,7 +756,15 @@ footer .box img{
   filter: saturate(var(--fred));
 }
 footer .box img:hover{
-  filter: invert(0.7);
+  filter: invert(0.3);
+}
+
+footer .box span{
+  color: var(--red);
+}
+footer .box a{
+  cursor: pointer;
+  color: var(--red);
 }
 
 
